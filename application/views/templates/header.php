@@ -1,6 +1,9 @@
 <html>
     <head>
       <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+      
+      <script src="//cdn.ckeditor.com/4.7.1/basic/ckeditor.js"></script>
+
       <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
       <title>CodeIgniter App</title>
     </head>
@@ -13,9 +16,12 @@
           <div id="navbar">
             <ul class="nav navbar-nav">
               <li><a href="<?php echo base_url(); ?>">Home</a></li>
-              <li><a href="<?php echo base_url(); ?>posts">Posts</a></li>
-              <li><a href="<?php echo base_url(); ?>posts/create">New Post</a></li>
+              <li><a href="<?php echo base_url(); ?>posts">Blog</a></li>
               <li><a href="<?php echo base_url(); ?>about">About</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="<?php echo base_url(); ?>posts/create">New Post</a></li>
             </ul>
           </div>
         </div>
