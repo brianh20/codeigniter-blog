@@ -1,9 +1,15 @@
 <h2><?php echo $post['title']; ?></h2>
 
-<small class="post-date">Posted on: <?php echo $post['created']; ?></small><br/>
-
-<div class="post-body">
-  <?php echo $post['body']; ?>
+<div class="row">
+  <div class="col-md-3">
+    <img class="col-md-12" src="<?php echo site_url(); ?>assets/images/posts/<?php echo $post['post_image'];?>" />
+  </div>
+  <div class="col-md-9">
+    <small class="post-date">Posted on: <?php echo $post['created']; ?></small><br/>
+    <div class="post-body">
+      <?php echo $post['body']; ?>
+    </div>      
+  </div>
 </div>
 
 <hr>
