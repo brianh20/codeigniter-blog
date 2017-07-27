@@ -35,6 +35,12 @@
         $this->load->view('posts/create', $data);
         $this->load->view('templates/footer');
       }else{
+        $config['upload_path'] = './assets/images/posts';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max-size'] = '2048';
+        $config['max-width'] = '500';
+        $config['max-height'] = '500';
+        
         $this->Post_model->create_post();
         redirect('posts');
       }
@@ -47,6 +53,7 @@
 
     public function edit($slug){
       $data['post'] = $this->Post_model->get_posts($slug);
+      $data['categories'] = $this->Post_model->get_categories();
 
       if(empty($data['post'])){
           show_404();
