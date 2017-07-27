@@ -38,10 +38,20 @@
         $config['upload_path'] = './assets/images/posts';
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max-size'] = '2048';
-        $config['max-width'] = '500';
-        $config['max-height'] = '500';
+        $config['max-width'] = '1000';
+        $config['max-height'] = '1000';
+
+        $this->load->library('upload', $config);
+
+        if(!$this->upload->do_upload()){
+          $errors = array('error' => $this->upload->display_errors());
+          $post_image = 'noimage.jpg';
+        }else{
+          $data = array('upload_data' => $this->upload->data());
+          $post_image = $_FILES['userfile']['name'];
+        }
         
-        $this->Post_model->create_post();
+        $this->Post_model->create_post($post_image);
         redirect('posts');
       }
     }
