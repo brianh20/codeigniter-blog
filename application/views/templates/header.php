@@ -1,10 +1,15 @@
 <html>
     <head>
+      <!-- flatsy bootstrap -->
       <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
-      
+      <!-- ckeditor -->
       <script src="//cdn.ckeditor.com/4.7.1/basic/ckeditor.js"></script>
-
+      <!-- custom styles  -->
       <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+      <!-- webix integration  -->
+      <script src="<?php echo base_url(); ?>assets/webix/webix.js"></script>
+      <link rel="stylesheet" href="<?php echo base_url(); ?>assets/webix/webix.css">
+      
       <title>CodeIgniter App</title>
     </head>
     <body>
